@@ -20,7 +20,7 @@ Module MultiplicationTable
 
         Dim firstNumber As Integer
         Dim multiNum As Integer = 1
-        Dim multiNumTwo As Integer = 1
+        Dim multiNumTwo As Integer = 2
         Dim numOne As String
         Dim lineCheck As Integer
         Console.WriteLine("Num one is for loop and num two is num in loop")
@@ -35,14 +35,14 @@ Module MultiplicationTable
 
             multiNum = 1 + multiNum
         Next
-
+        Console.WriteLine("2")
         For i = 1 To firstNumber
-            multiNumTwo = 1 * multiNumTwo
+            multiNumTwo = 2 * multiNumTwo
 
 
-            Console.WriteLine($"{multiNumTwo} ")
+            Console.Write($"{multiNumTwo} ")
 
-            multiNumTwo = 1 + multiNumTwo
+            multiNumTwo = 0 + multiNumTwo
         Next
 
         Console.ReadLine()
