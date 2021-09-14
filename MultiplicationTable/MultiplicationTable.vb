@@ -8,8 +8,10 @@ Option Explicit On
 Option Compare Text
 Module MultiplicationTable
     Sub Main()
+        Dim one As Integer = 1
         Dim firstNumber As Integer
         Dim secondNumber As Integer
+        Dim multiNum As Integer
         Dim numOne As String
         Dim numTwo As String
 
@@ -20,8 +22,14 @@ Module MultiplicationTable
         secondNumber = CInt(numTwo)
 
 
+
         For i = 1 To firstNumber
-            Console.WriteLine($"{secondNumber}")
+            multiNum = (1 * multiNum)
+
+            Console.Write($"{multiNum} ,")
+
+            multiNum = multiNum + 1
+
 
         Next
 
