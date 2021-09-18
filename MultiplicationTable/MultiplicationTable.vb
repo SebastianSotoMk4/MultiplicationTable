@@ -26,13 +26,19 @@ Module MultiplicationTable
         Console.WriteLine("Num one is for loop and num two is num in loop")
         numOne = Console.ReadLine()
         firstNumber = CInt(numOne)
-        Do Until multiNum = firstNumber
-            multiNum = 1 + multiNum
-            For i As Integer = 1 To firstNumber
-                Console.Write("{0} ", i * multiNum)
-                Console.WriteLine()
-            Next
 
+        Do Until multiNum = firstNumber
+
+            multiNum = 1 + multiNum
+            Console.WriteLine($"/////{multiNum}/////")
+            For i As Integer = 1 To firstNumber
+
+                Console.Write("{0} ", i * multiNum)
+
+
+
+            Next
+            Console.WriteLine()
         Loop
         'For i = 1 To firstNumber
         '    multiNum = 1 * multiNum
