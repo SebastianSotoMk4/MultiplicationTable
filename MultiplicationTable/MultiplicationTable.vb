@@ -8,60 +8,32 @@ Option Explicit On
 Option Compare Text
 Module MultiplicationTable
     Sub Main()
+        Dim userNumber As Integer
+        Dim storedNumber As Integer
+        Dim userInput As String
+        Dim numberCheck As Boolean
 
-        'Dim numTwo As String
-        ''numTwo = Console.ReadLine()
-        'secondNumber = CInt(numTwo)
-        'multiNumtwo = 1 * multiNumtwo
-        'Console.WriteLine($"{multiNumtwo} ")
-        'multiNumtwo = multiNumtwo + 1
-        'Console.ReadLine()
-        'Left()
+        Do
+            Console.WriteLine("Enter a number:")
+            userInput = Console.ReadLine()
+            Try
+                userNumber = CInt(userInput)
+                numberCheck = True
+            Catch ex As Exception
+                Console.WriteLine("Please enter a number")
+            End Try
+        Loop Until numberCheck = True
 
-        Dim firstNumber As Integer
-        Dim multiNum As Integer
-        Dim multiNumTwo As Integer
-        Dim numOne As String
-        Dim lineCheck As Integer
-        Console.WriteLine("Num one is for loop and num two is num in loop")
-        numOne = Console.ReadLine()
-        firstNumber = CInt(numOne)
+        Do Until storedNumber = userNumber
 
-        Do Until multiNum = firstNumber
+            storedNumber = 1 + storedNumber
+            For i As Integer = 1 To userNumber
 
-            multiNum = 1 + multiNum
-            Console.WriteLine($"/////{multiNum}/////")
-            For i As Integer = 1 To firstNumber
-
-                Console.Write("{0} ", i * multiNum)
-
-
+                Console.Write("{0} ", i * storedNumber)
 
             Next
             Console.WriteLine()
         Loop
-        'For i = 1 To firstNumber
-        '    multiNum = 1 * multiNum
-
-        '    Console.Write($"{multiNum} ")
-
-        '    multiNum = 1 + multiNum
-        'Next
-
-        'For i = 1 To firstNumber
-        '    multiNumTwo = 1 * multiNumTwo
-
-
-        '    Console.WriteLine($"{multiNumTwo} ")
-
-        '    multiNumTwo = 1 + multiNumTwo
-        'Next
-
         Console.ReadLine()
-    End Sub
-    Sub Left()
-
-
-
     End Sub
 End Module
