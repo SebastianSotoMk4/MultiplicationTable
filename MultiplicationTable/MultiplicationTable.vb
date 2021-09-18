@@ -19,31 +19,37 @@ Module MultiplicationTable
         'Left()
 
         Dim firstNumber As Integer
-        Dim multiNum As Integer = 1
-        Dim multiNumTwo As Integer = 2
+        Dim multiNum As Integer
+        Dim multiNumTwo As Integer
         Dim numOne As String
         Dim lineCheck As Integer
         Console.WriteLine("Num one is for loop and num two is num in loop")
         numOne = Console.ReadLine()
         firstNumber = CInt(numOne)
-
-
-        For i = 1 To firstNumber
-            multiNum = 1 * multiNum
-
-            Console.Write($"{multiNum} ")
-
+        Do Until multiNum = firstNumber
             multiNum = 1 + multiNum
-        Next
-        Console.WriteLine("2")
-        For i = 1 To firstNumber
-            multiNumTwo = 2 * multiNumTwo
+            For i As Integer = 1 To firstNumber
+                Console.Write("{0} ", i * multiNum)
+                Console.WriteLine()
+            Next
+
+        Loop
+        'For i = 1 To firstNumber
+        '    multiNum = 1 * multiNum
+
+        '    Console.Write($"{multiNum} ")
+
+        '    multiNum = 1 + multiNum
+        'Next
+
+        'For i = 1 To firstNumber
+        '    multiNumTwo = 1 * multiNumTwo
 
 
-            Console.Write($"{multiNumTwo} ")
+        '    Console.WriteLine($"{multiNumTwo} ")
 
-            multiNumTwo = 0 + multiNumTwo
-        Next
+        '    multiNumTwo = 1 + multiNumTwo
+        'Next
 
         Console.ReadLine()
     End Sub
