@@ -11,8 +11,8 @@ Module MultiplicationTable
         Dim userNumber As Integer
         Dim storedNumber As Integer
         Dim userInput As String
+        Dim writeNumber As String
         Dim numberCheck As Boolean
-        Dim printNumber As String
         Do
             Console.WriteLine("Enter a number:")
             userInput = Console.ReadLine()
@@ -23,14 +23,18 @@ Module MultiplicationTable
                 Console.WriteLine("Please enter a number")
             End Try
         Loop Until numberCheck = True
-        Do Until storedNumber = userNumber
+        '(1 + storedNumber) * i = writeNumber
+        'storedNumber = previous number, it will start at 0
+        'i = amount of loops 
+        'writeNumber = the number to be writen to the console.
+        Do
             storedNumber = 1 + storedNumber
             For i As Integer = 1 To userNumber
-                printNumber = CStr(i * storedNumber).PadLeft(4)
-                Console.Write(printNumber)
+                writeNumber = CStr(i * storedNumber).PadLeft(4)
+                Console.Write(writeNumber)
             Next
             Console.WriteLine()
-        Loop
+        Loop Until storedNumber = userNumber
         Console.ReadLine()
     End Sub
 End Module
