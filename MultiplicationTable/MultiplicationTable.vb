@@ -24,6 +24,7 @@ Module MultiplicationTable
                 Console.WriteLine("Please enter a number")
             End Try
         Loop Until numberCheck = True
+        'functions as follows: - TJR
         '(1 + storedNumber) * i = writeNumber
         'storedNumber = previous number, it will start at 0
         'i = amount of loops 
