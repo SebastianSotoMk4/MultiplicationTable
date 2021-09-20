@@ -16,6 +16,7 @@ Module MultiplicationTable
         Do
             Console.WriteLine("Enter a number:")
             userInput = Console.ReadLine()
+            Console.WriteLine($"Enjoy your {userInput} x {userInput} Multiplication Table:")
             Try
                 userNumber = CInt(userInput)
                 numberCheck = True
